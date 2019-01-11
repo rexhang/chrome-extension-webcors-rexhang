@@ -1,0 +1,115 @@
+body {
+  -webkit-user-select: none;
+  font-family: 'Microsoft YaHei';
+  color: #666;
+}
+
+#about-container {
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+}
+
+#about-container h2 {
+  margin: 5px 0;
+}
+
+#product-description {
+  -webkit-margin-start: 10px;
+}
+
+#version-container {
+  color: #999;
+  padding-bottom: 5px;
+  display: block;
+}
+
+#copyright-container {
+  margin-top: 30px;
+  color: #999;
+}
+
+.desc {
+  margin: 20px 0 0 0;
+  color: #049c65;
+  font-weight: bold;
+}
+
+.styleInput{
+  font-size: 14px;
+  text-indent: 14px;
+  height: 36px;
+  width: 222px !important;
+  line-height: 36px;
+}
+.styleInput:focus{
+  -webkit-transition: border-color 600ms !important;
+  border-color: #ac1bdc !important;
+}
+
+.chrome-bootstrap .frame .view {
+  -webkit-margin-start: 170px
+}
+
+#success_message {
+  margin-top: 10px;
+  padding: 5px 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+#success_message.visible {
+  opacity: 1;
+}
+
+.social-buttons {
+  margin-left: 23px;
+}
+
+
+.chrome-bootstrap a {
+  text-decoration: none;
+}
+.chrome-bootstrap a:hover {
+  text-decoration: underline;
+}
+
+#response_headers input[type="text"] {
+  width: 200px;
+}
+
+#dialog input[type="text"] {
+  width: 270px;
+}
+
+.overlay.transparent {
+  /*display: none;*/
+  z-index: -1;
+}
+#filter_list input + a {
+  margin-left: 10px;
+}
+#filter_list a {
+  /*display: none;*/
+}
+
+#filter_list .row:hover a {
+  /*display: inline;*/
+  cursor: pointer;
+}
+
+#add_url{
+  width: 120px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #00BFFF;
+  color: #fff;
+  cursor: pointer;
+}
+#add_url:hover{
+  background-color: #00a1ff;
+}
+#add_url:active{
+  opacity: 0.5;
+}

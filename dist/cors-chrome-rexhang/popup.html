@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="/popup.css">
+    <link rel="stylesheet" href="/bower_components/weui/dist/style/weui.css">
+  </head>
+  <body>
+    <script id="filter_list_template" type="text/html">
+      {{each urls}}
+      <label class="weui_cell weui_check_label" for="fu_{{$value.id}}">
+        <div class="weui_cell_hd">
+          <input type="checkbox" class="weui_check" name="checkbox" id="fu_{{$value.id}}" {{if $value.active}} checked{{/if}}>
+          <i class="weui_icon_checked"></i>
+        </div>
+        <div class="weui_cell_bd weui_cell_primary">
+          <p>{{$value.url}}</p>
+        </div>
+        <div class="weui_cell_ft">{{$value.description}}</div>
+      </label>
+      {{/each}}
+    </script>
+    <script id="container_template" type="text/html">
+      <div class="cell">
+        <div class="weui_cells_title">{{title}}</div>
+        <div class="weui_cells weui_cells_form">
+          <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">{{cors}}</div>
+            <div class="weui_cell_ft">
+              <input class="weui_switch" type="checkbox" id="switch">
+            </div>
+          </div>
+        </div>
+        <div class="weui_cells_title">{{list}}</div>
+        <div class="weui_cells weui_cells_checkbox weui_cells_access">
+          <div id="filter_list"></div>
+          <a class="weui_cell" id="options">
+            <div class="weui_cell_bd weui_cell_primary">
+              <p>{{custom}}</p>
+            </div>
+            <div class="weui_cell_ft">
+            </div>
+          </a>
+        </div>
+      </div>
+    </script>
+
+    <div id="container" class="container"></div>
+
+    <script src="/bower_components/zepto/zepto.min.js"></script>
+    <script src="/bower_components/art-template/dist/template.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
